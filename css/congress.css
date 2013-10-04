@@ -1,0 +1,135 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter|Source+Sans+Pro|Tangerine:700|Satisfy);
+
+body {
+  background-color: #f8f8f8;
+  color: #333333;
+  font-family: 'Bitter', Georgia, Times, "Times New Roman", serif;;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+a:link { color: #006699; }
+p {
+  font-weight: normal;
+  margin: 0 0 5px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-family: 'Bitter', Georgia, Times, "Times New Roman", serif; }
+h2 { margin-left: 20px; }
+h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+/*
+clearfix
+*/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* img */
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.header {
+  border-bottom: 1px solid #dddddd;
+  padding: 40px;
+  text-align: center;
+}
+.header h2 {
+  font-size: 52px;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+.header h2 u {
+  color: #000000;
+  font-weight: bold;
+}
+
+.state {
+  border-bottom: 1px solid #dddddd;
+  padding: 20px;
+}
+.state:nth-child(even) { background-color: #eeeeee; }
+.person {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 2px 0 rgba(50, 50, 50, 0.2);
+  -moz-box-shadow:    0 0 2px 0 rgba(50, 50, 50, 0.2);
+  box-shadow:         0 0 2px 0 rgba(50, 50, 50, 0.2);
+  float: left;
+  margin: 2%;
+  min-height: 420px;
+  padding: 20px 0 0;
+  position: relative;
+  text-align: center;
+  width: 29%;
+}
+
+@media (max-width: 999px) {
+  .header h2 {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+  .person {
+    width: 46%;
+  }
+}
+@media (max-width: 649px) {
+  .header h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+  .person {
+    float: none;
+    margin-bottom: 20px;
+    width: 96%;
+  }
+}
+
+.person img { margin-bottom: 10px; }
+.contact-info { text-align: center; }
+.contact-info ul {
+  margin: 0 auto 10px;
+  max-width: 200px;
+  padding: 0;
+}
+.contact-info li {
+  list-style: none;
+  float: left;
+  width: 33%;
+}
+.contact-info li a {
+  font-size: 24px;
+  text-decoration: none;
+}
+.contact-info li a.facebook {
+  color: #46629E;
+}
+.contact-info li a.twitter {
+  color: #00ACEE;
+}
+.term-end {
+  background-color: #fd4239;
+  bottom: 0;
+  color: #ffffff;
+  margin: 20px 0 0;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+}
