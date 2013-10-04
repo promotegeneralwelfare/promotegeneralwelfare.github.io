@@ -97,11 +97,6 @@ p.small {
   padding: 20px 40px;
 }
 .header .vote h2 { margin-top: 25px; }
-@media (max-width: 500px) {
-  .vote  h1{
-    font-size: 60px;
-  }
-}
 .header h2 {
   font-size: 36px;
   font-weight: normal;
@@ -133,6 +128,9 @@ p.small {
 }
 
 @media (max-width: 999px) {
+  .vote  h1{
+    font-size: 32px;
+  }
   .header h2 {
     font-size: 32px;
     font-weight: normal;
@@ -143,8 +141,9 @@ p.small {
   }
 }
 @media (max-width: 649px) {
+  form, input[type="text"], .btn { font-size: 18px; }
   .header h2 {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: normal;
     margin: 0 0 20px;
   }
