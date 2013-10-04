@@ -20,11 +20,25 @@
     <div class="header">
       <hrgoup>
         <h2>It's time for change.</h2>
+        <hr>
         <h2>We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, <u>promote the general Welfare</u>, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.</h2>
-        <h2>Below is a list of the current legislators who are failing our country. Remember the names and faces of those in your state and when they run for re-election let them know how you feel.</h2>
+        <hr>
+        <h2>Below is a list of the current legislators who are failing our country, along with their contact information.</h2>
+        <h2 class="steps">Voice your concerns today.<br/>
+        Remember the names and faces of the legislators in your state.<br />
+        And when they run for re-election speak even louder with your vote.</h2>
       </hgroup>
       <p class="small">* No parties are listed. This isn't a party issue, it's a people issue.</p>
-      <h1 class="vote">VOTE</h1>
+      <hgroup class="vote">
+        <h2>And don't forget ... </h2>
+        <h1>VOTE</h1>
+      </hgroup>
+    </div>
+
+    <div id="legislators"></div>
+
+    <div class="footer">
+      <p class="small">Big thanks to the <a href="http://sunlightfoundation.com/">Sunlight Foundation</a> for the <a href="http://sunlightlabs.github.io/congress/index.html">Sunlight Congress API</a> and <a href="http://sunlightlabs.github.io/congress/index.html#bulk-data/legislator-photos">photos</a>, to <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> for the icons, to <a href="https://github.com">Github</a> for the <a href="http://pages.github.com/">free hosting</a>, and to <a href="http://google.com">Google</a> for the <a href="http://www.google.com/fonts/">fonts</a>.</p>
     </div>
 
     <script src="js/jquery-1.9.1.min.js"></script>
@@ -47,7 +61,7 @@
               // if state isn't null and its a new state
               if (state != "" && state != value.state_name) {
                 htmlstring = htmlstring + '</div>';
-                $("body").append(htmlstring);
+                $("#legislators").append(htmlstring);
                 htmlstring = "";
               }
 

@@ -27,6 +27,7 @@ h3 {
   font-size: 18px;
   margin: 0 0 5px;
 }
+
 /*
 clearfix
 */
@@ -58,20 +59,27 @@ p.small {
   padding: 40px;
   text-align: center;
 }
-.vote {
+.vote h1 {
+  background-color: #fd4239;
+  border-radius: 2px;
+  color: #ffffff;
+  display: inline-block;
   font-size: 150px;
-  color: #fd4239;
+  margin-top: 0;
+  padding: 20px 40px;
 }
+.header .vote h2 { margin-top: 100px; }
 @media (max-width: 500px) {
-  .vote {
+  .vote  h1{
     font-size: 60px;
   }
 }
 .header h2 {
   font-size: 36px;
   font-weight: normal;
-  margin: 0 0 20px;
+  margin: 20px 0;
 }
+.header h2.steps { color: #fd4239; }
 .header h2 u {
   color: #000000;
   font-weight: bold;
@@ -149,4 +157,9 @@ p.small {
   padding: 10px 0;
   position: absolute;
   width: 100%;
+}
+
+.footer {
+  padding-top: 20px;
+  text-align: center;
 }
