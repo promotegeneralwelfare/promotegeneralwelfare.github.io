@@ -18,7 +18,10 @@ h2,
 h3,
 h4,
 h5,
-h6 { font-family: 'Bitter', Georgia, Times, "Times New Roman", serif; }
+h6 {
+  font-family: 'Bitter', Georgia, Times, "Times New Roman", serif;
+  font-weight: normal;
+}
 h2 { margin-left: 20px; }
 h3 {
   font-size: 18px;
@@ -45,15 +48,29 @@ img {
   vertical-align: middle;
 }
 
+p.small {
+  font-size: 12px;
+  font-style: italic;
+}
+
 .header {
   border-bottom: 1px solid #dddddd;
   padding: 40px;
   text-align: center;
 }
+.vote {
+  font-size: 150px;
+  color: #fd4239;
+}
+@media (max-width: 500px) {
+  .vote {
+    font-size: 60px;
+  }
+}
 .header h2 {
-  font-size: 52px;
+  font-size: 36px;
   font-weight: normal;
-  margin: 0 0 10px;
+  margin: 0 0 20px;
 }
 .header h2 u {
   color: #000000;
