@@ -58,6 +58,7 @@ input[type="text"] {
   border-radius: 2px;
   font-family: 'Bitter', Georgia, Times, "Times New Roman", serif;
   font-size: 24px;
+  margin-bottom: 10px;
   padding: 5px;
 }
 button {
