@@ -93,7 +93,7 @@ p.small {
   color: #ffffff;
   display: inline-block;
   font-size: 100px;
-  margin: 0 0 20px;
+  margin: 10px 0 20px;
   padding: 20px 40px;
 }
 .header .vote h2 { margin-top: 25px; }
@@ -210,4 +210,9 @@ typeahead
 }
 .tt-is-under-cursor {
   background-color: #eeeeee;
+}
+
+.twitter-share-button {
+  float: right;
+  padding-right: 20px;
 }
