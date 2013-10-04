@@ -154,6 +154,11 @@ p.small {
   }
 }
 
+@media (max-width: 400px) {
+  body { padding: 10px; }
+  input[type="text"] { width: 200px; }
+}
+
 .person img { margin-bottom: 10px; }
 .contact-info { text-align: center; }
 .contact-info ul {
@@ -211,7 +216,8 @@ typeahead
   background-color: #eeeeee;
 }
 
-.twitter-share-button {
+.social {
   float: right;
   padding-right: 20px;
 }
+.fb-like { margin-right: 10px; }
