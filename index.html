@@ -14,6 +14,7 @@
     <!--[if IE 9]>
       <script src="js/html5shiv.js"></script>
     <![endif]-->
+    <link media="print" href="css/print.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
      var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-44607820-1']);
@@ -30,7 +31,7 @@
   <body>
     <div id="fb-root"></div>
     <script>(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
-    <div class="header">
+    <div class="header no-print">
       <div class="w">
         <h1>VOTE FOR CHANGE</h1>
         <form id="legislator-search" role="form">
@@ -93,7 +94,7 @@
           var searchURL = "http://congress.api.sunlightfoundation.com/legislators?apikey=c9d6acff9f004d7aacad8984d1844cce&per_page=all&order=state__asc,title__desc&state_name=" + inputState;
           
           //append the state searched
-          $("#legislators .w").css("display", "block").append('<h1>' + $("#state-name").val() + '</h1>');
+          $("#legislators .w").css("display", "block").append('<h1>' + $("#state-name").val() + '</h1><a class="no-print btn btn-print" href="javascript:window.print();">Print These Names</a> to remember at election time.');
 
           $.ajax({
             url: searchURL,
@@ -126,14 +127,14 @@
 
                 // output the person
                 htmlstring = htmlstring + '<div class="person"><div class="w-person">';
-                htmlstring = htmlstring + '<img src="img/' + value.bioguide_id + '.jpg" />';
+                htmlstring = htmlstring + '<img class="no-print" src="img/' + value.bioguide_id + '.jpg" />';
                 htmlstring = htmlstring + '<div class="info">';
                 htmlstring = htmlstring + '<h3>' + value.title + '. ' + value.first_name + ' ';
                 if (value.middle_name != null) {
                   htmlstring = htmlstring + value.middle_name + ' ';
                 }
                 htmlstring = htmlstring + value.last_name + '</h3>';
-                htmlstring = htmlstring + '<div class="contact-info">';
+                htmlstring = htmlstring + '<div class="contact-info no-print">';
                 htmlstring = htmlstring + '<ul class="clearfix">';
                 htmlstring = htmlstring + '<li><a class="facebook" href="https://facebook.com/' + value.facebook_id + '"><i class="icon-facebook"></i></a></li>';
                 htmlstring = htmlstring + '<li><a class="twitter" href="https://twitter.com/' + value.twitter_id + '"><i class="icon-twitter"></i></a></li>';
