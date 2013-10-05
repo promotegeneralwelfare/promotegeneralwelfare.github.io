@@ -15,7 +15,7 @@
       <script src="js/html5shiv.js"></script>
     <![endif]-->
     <script type="text/javascript">
-      var _gaq = _gaq || [];
+     /* var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-44607820-1']);
       _gaq.push(['_trackPageview']);
 
@@ -23,48 +23,52 @@
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+      })();*/
     </script>
   </head>
 
   <body>
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="social">
-      <div class="fb-like" data-href="http://promotegeneralwelfare.github.io/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
-      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out this tool to find your legislators and let them know how you feel. #governmentshutdown" data-via="PromoteGenWel" data-dnt="true">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    </div>
+    <script>(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
     <div class="header">
-      <hgroup class="vote">
+      <div class="w">
         <h1>VOTE FOR CHANGE</h1>
-        <h2 class="steps">Our country needs our help.</h2>
-        <h2>Here is a simple tool you can use to voice your concerns today.<br /> But, remember the names and faces of the legislators in your state so when they run for re-election you can speak even louder with your vote.</h2>
-      </hgroup>
-      <p class="small">* No parties are listed. This isn't a party issue, it's a people issue.</p>
-      <form class="inline" id="legislator-search" role="form">
-        <div class="input-group">
-          <label for="state-name">What state do you live in?</label><br />
-          <input id="state-name" placeholder="State" type="text">
+        <form id="legislator-search" role="form">
+          <div class="input-group">
+            <label for="state-name">What state do you live in?</label>
+            <input id="state-name" placeholder="State" type="text">
+          </div>
+          <button id="search" type="submit" class="btn" onClick="_gaq.push(['_trackEvent', 'Legislators', 'Search', $('#state-name').val()]);">Find Your Legislators</button>
+        </form>
+        <div class="footnote">
+          <p class="small">* No parties are listed.</p>
+          <div class="social">
+            <!--facebook-->
+            <div class="fb-like" data-href="http://promotegeneralwelfare.github.io/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+            <!--twitter-->
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out this tool to find your legislators and let them know how you feel. #governmentshutdown" data-via="PromoteGenWel" data-dnt="true">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </div>
         </div>
-        <button id="search" type="submit" class="btn" onClick="_gaq.push(['_trackEvent', 'Legislators', 'Search', $('#state-name').val()]);">Find Your Legislators</button>
-      </form>
-      OR<br />
-      <button id="search-all" type="submit" class="btn btn-secondary" onClick="_gaq.push(['_trackEvent', 'Legislators', 'Search', 'All']);">View All Legislators</button>
+      </div>
     </div>
 
-    <div id="legislators"></div>
-    <div id="state" class="state"></div>
+    <div id="legislators" class="state">
+      <div class="w">
+        <blockquote>We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.</blockquote>
+        <h3>Forgotten Goals.</h3>
+        <p>The preamble of our constitution sets goals for our country; a more perfect Union, Justice, domestic Tranquility, common defence, general Welfare, secure Liberty today and tomorrow. Today, as our government is shutdown for the <a href="http://en.wikipedia.org/wiki/Government_shutdown_in_the_United_States">18th time since 1976</a>, those goals seem to have been forgotten. Not by the people, but forgotten by the legislators the people have elected.</p>
+        <h3>A Way to Remember.</h3>
+        <p>The people, only the people, can help our legislators remember. The people can create a fresh start, a clean slate.</p>
+        <p>Using this tool you can find the names and contact information (Twitter and Facebook accounts, email, and phone numbers) of your states legislators. Use this information to voice your concerns today. Then, when elections are held again, use this tool to remember the names and faces of your legislators to speak even louder with your vote.</p>
+        <h3>Require Changes.</h3>
+        <p>Require current and future legislators to be held to the same laws that they set for the people who elected them. Require them to work together to form a Union, require Justice, require Tranquility, require defence, require the promotion of our Welfare, require Liberty today and tomorrow. Require all of this through your <strong>VOTE</strong>. Show your legislators that their elected status is as a servant, not as a ruler.</p>
+      </div>
+    </div>
 
-    <div class="footer">
+    <!--<div class="footer">
       <p class="small">Big thanks to the <a href="http://sunlightfoundation.com/">Sunlight Foundation</a> for the <a href="http://sunlightlabs.github.io/congress/index.html">Sunlight Congress API</a> and <a href="http://sunlightlabs.github.io/congress/index.html#bulk-data/legislator-photos">photos</a>, to <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> for the icons, to <a href="https://github.com">Github</a> for the <a href="http://pages.github.com/">free hosting</a>, and to <a href="http://google.com">Google</a> for the <a href="http://www.google.com/fonts/">fonts</a>.</p>
-    </div>
+    </div>-->
 
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/typeahead.min.js"></script>
@@ -81,176 +85,83 @@
           limit: 20
         }]);
 
-        $("#search, #search-all").click(function() {
+        $("#search").click(function() {
           // clear results
-          $("#legislators, #state").html("");
+          $("#legislators .w").html("");
+
           var inputState = $("#state-name").val().replace(/ /g, "%20");
           var searchURL = "http://congress.api.sunlightfoundation.com/legislators?apikey=c9d6acff9f004d7aacad8984d1844cce&per_page=all&order=state__asc,title__desc&state_name=" + inputState;
-          if (this.id == "search-all") {
-            $("#legislators").css("display", "block");
-            $("#state").css("display", "none");
-            searchURL = "data/legislators.json";
-            $.ajax({
-              url: searchURL,
-              dataType: 'json',
-              success:function(results) {
-                var count = 0;
-                var state = "";
-                var title = "";
-                var htmlstring = "";
-                // alert (results.length);
-                $.each(results.results, function(key, value) {
-                  // if title isn't null
-                  if (title != "" && title != value.title) {
-                    htmlstring = htmlstring + '</div>';
-                  }
+          
+          //append the state searched
+          $("#legislators .w").css("display", "block").append('<h1>' + $("#state-name").val() + '</h1>');
 
-                  // if state isn't null and its a new state
-                  if (state != "" && state != value.state_name) {
-                    htmlstring = htmlstring + '</div>';
-                    $("#legislators").append(htmlstring);
-                    htmlstring = "";
-                  }
-
-                  // if a new state output a state wrapper and the state name
-                  if (state != value.state_name) {
-                    htmlstring = htmlstring + '<div class="state clearfix"><h1>' + value.state_name + '</h1>';
-                  }
-
-                  // if a new title (rep or sen) output a rep/sen wrapper
-                  if (title != value.title) {
-                    htmlstring = htmlstring + '<div class="title clearfix"><h2>';
-                    if (value.title == "Rep") {
-                      htmlstring = htmlstring + "Representatives";
-                    } else if (value.title = "Sen") {
-                      htmlstring = htmlstring + "Senators";
-                    } else if (value.title = "Del") {
-                      htmlstring = htmlstring + 'Delegates';
-                    }
-                    htmlstring = htmlstring + '</h2>';
-                  }
-
-                  // output the person
-                  htmlstring = htmlstring + '<div class="person">';
-                  htmlstring = htmlstring + '<h3>' + value.title + '. ' + value.first_name + ' ';
-                  if (value.middle_name != null) {
-                    htmlstring = htmlstring + value.middle_name + ' ';
-                  }
-                  htmlstring = htmlstring + value.last_name + '</h3>'
-                  htmlstring = htmlstring + '<p>of ' + value.state_name + '</p>';
-                  htmlstring = htmlstring + '<img src="img/' + value.bioguide_id + '.jpg" />';
-                  htmlstring = htmlstring + '<div class="contact-info">';
-                  htmlstring = htmlstring + '<ul class="clearfix">';
-                  htmlstring = htmlstring + '<li><a class="facebook" href="https://facebook.com/' + value.facebook_id + '"><i class="icon-facebook-sign"></i></a></li>';
-                  htmlstring = htmlstring + '<li><a class="twitter" href="https://twitter.com/' + value.twitter_id + '"><i class="icon-twitter-sign"></i></a></li>';
-                  htmlstring = htmlstring + '<li><a class="email" href="' + value.contact_form + '"><i class="icon-envelope"></i></a></li>';
-                  htmlstring = htmlstring + '</ul>';
-                  htmlstring = htmlstring + '<p><i class="icon-phone"></i> ' + value.phone + '</p>';
-                  htmlstring = htmlstring + '<p class="term-end"><i class="icon-check-sign"></i> Term Ends - ' + value.term_end + '</p>';
+          $.ajax({
+            url: searchURL,
+            dataType: 'json',
+            success:function(results) {
+              var count = 0;
+              var state = "";
+              var title = "";
+              var htmlstring = '';
+              $.each(results.results, function(key, value) {
+                // if title isn't null
+                if (title != "" && title != value.title) {
                   htmlstring = htmlstring + '</div>';
+                  $("#legislators .w").append(htmlstring);
+                  htmlstring = "";
+                }
+
+                // if a new title (rep or sen) output a rep/sen wrapper
+                if (title != value.title) {
+                  htmlstring = htmlstring + '<div class="title clearfix"><h2>';
+                  if (value.title == "Rep") {
+                    htmlstring = htmlstring + "Representatives";
+                  } else if (value.title = "Sen") {
+                    htmlstring = htmlstring + "Senators";
+                  } else if (value.title = "Del") {
+                    htmlstring = htmlstring + 'Delegates';
+                  }
+                  htmlstring = htmlstring + '</h2>';
+                }
+
+                // output the person
+                htmlstring = htmlstring + '<div class="person"><div class="w-person">';
+                htmlstring = htmlstring + '<img src="img/' + value.bioguide_id + '.jpg" />';
+                htmlstring = htmlstring + '<div class="info">';
+                htmlstring = htmlstring + '<h3>' + value.title + '. ' + value.first_name + ' ';
+                if (value.middle_name != null) {
+                  htmlstring = htmlstring + value.middle_name + ' ';
+                }
+                htmlstring = htmlstring + value.last_name + '</h3>';
+                htmlstring = htmlstring + '<div class="contact-info">';
+                htmlstring = htmlstring + '<ul class="clearfix">';
+                htmlstring = htmlstring + '<li><a class="facebook" href="https://facebook.com/' + value.facebook_id + '"><i class="icon-facebook"></i></a></li>';
+                htmlstring = htmlstring + '<li><a class="twitter" href="https://twitter.com/' + value.twitter_id + '"><i class="icon-twitter"></i></a></li>';
+                htmlstring = htmlstring + '<li><a class="email" href="' + value.contact_form + '"><i class="icon-envelope"></i></a></li>';
+                htmlstring = htmlstring + '</ul>';
+                htmlstring = htmlstring + '<p><i class="icon-phone"></i> ' + value.phone + '</p>';
+                htmlstring = htmlstring + '<p class="term-end"><i class="icon-check-sign"></i> Term Ends - ' + value.term_end + '</p>';
+                htmlstring = htmlstring + '</div>';
+                htmlstring = htmlstring + '</div>';
+                htmlstring = htmlstring + '</div></div>';
+
+                // reset the title
+                title = value.title;
+
+                if (key >= results.results.length - 1) {
                   htmlstring = htmlstring + '</div>';
-
-                  // reset the state
-                  state = value.state_name;
-                  title = value.title;
-
-                  if (value.state_name == "American Samoa" || value.state_name == "District of Columbia" || value.state_name == "Guam" || value.state_name == "Northern Mariana Islands" || value.state_name == "Puerto Rico" || value.state_name == "US Virgin Islands") {
-                    // close title div
-                    htmlstring = htmlstring + '</div>';
-                    // reset the title
-                    title = "asdf";
-                  }
-                  if (key >= results.results.length - 1) {
-                    htmlstring = htmlstring + '</div></div>';
-                    $("#legislators").append(htmlstring);
-                  }
-                });
-              },
-              error: function(xhr, status, error) {
-                $.get('templates/stations.html', function(templates) {
-                  var template = $(templates).filter('#stations-api-error').html();
-                  var html = Mustache.to_html(template);
-                  $("#station-notify").html(html).fadeIn(1000);
-                });
-              }
-            });
-
-
-
-
-
-
-          } else {
-            $("#legislators").css("display", "none");
-            $("#state").css("display", "block").append('<h1>' + $("#state-name").val() + '</h1>');
-            $.ajax({
-              url: searchURL,
-              dataType: 'json',
-              success:function(results) {
-                var count = 0;
-                var state = "";
-                var title = "";
-                var htmlstring = '';
-                $.each(results.results, function(key, value) {
-                  // if title isn't null
-                  if (title != "" && title != value.title) {
-                    htmlstring = htmlstring + '</div>';
-                    $("#state").append(htmlstring);
-                    htmlstring = "";
-                  }
-
-                  // if a new title (rep or sen) output a rep/sen wrapper
-                  if (title != value.title) {
-                    htmlstring = htmlstring + '<div class="title clearfix"><h2>';
-                    if (value.title == "Rep") {
-                      htmlstring = htmlstring + "Representatives";
-                    } else if (value.title = "Sen") {
-                      htmlstring = htmlstring + "Senators";
-                    } else if (value.title = "Del") {
-                      htmlstring = htmlstring + 'Delegates';
-                    }
-                    htmlstring = htmlstring + '</h2>';
-                  }
-
-                  // output the person
-                  htmlstring = htmlstring + '<div class="person">';
-                  htmlstring = htmlstring + '<h3>' + value.title + '. ' + value.first_name + ' ';
-                  if (value.middle_name != null) {
-                    htmlstring = htmlstring + value.middle_name + ' ';
-                  }
-                  htmlstring = htmlstring + value.last_name + '</h3>'
-                  htmlstring = htmlstring + '<p>of ' + value.state_name + '</p>';
-                  htmlstring = htmlstring + '<img src="img/' + value.bioguide_id + '.jpg" />';
-                  htmlstring = htmlstring + '<div class="contact-info">';
-                  htmlstring = htmlstring + '<ul class="clearfix">';
-                  htmlstring = htmlstring + '<li><a class="facebook" href="https://facebook.com/' + value.facebook_id + '"><i class="icon-facebook-sign"></i></a></li>';
-                  htmlstring = htmlstring + '<li><a class="twitter" href="https://twitter.com/' + value.twitter_id + '"><i class="icon-twitter-sign"></i></a></li>';
-                  htmlstring = htmlstring + '<li><a class="email" href="' + value.contact_form + '"><i class="icon-envelope"></i></a></li>';
-                  htmlstring = htmlstring + '</ul>';
-                  htmlstring = htmlstring + '<p><i class="icon-phone"></i> ' + value.phone + '</p>';
-                  htmlstring = htmlstring + '<p class="term-end"><i class="icon-check-sign"></i> Term Ends - ' + value.term_end + '</p>';
-                  htmlstring = htmlstring + '</div>';
-                  htmlstring = htmlstring + '</div>';
-
-                  // reset the title
-                  title = value.title;
-
-                  if (key >= results.results.length - 1) {
-                    htmlstring = htmlstring + '</div>';
-                    $("#state").append(htmlstring);
-                  }
-                });
-              },
-              error: function(xhr, status, error) {
-                $.get('templates/stations.html', function(templates) {
-                  var template = $(templates).filter('#stations-api-error').html();
-                  var html = Mustache.to_html(template);
-                  $("#station-notify").html(html).fadeIn(1000);
-                });
-              }
-            });
-            //$("#legislators").append(htmlstring + '</div>');
-          }
+                  $("#legislators .w").append(htmlstring);
+                }
+              });
+            },
+            error: function(xhr, status, error) {
+              $.get('templates/stations.html', function(templates) {
+                var template = $(templates).filter('#stations-api-error').html();
+                var html = Mustache.to_html(template);
+                $("#station-notify").html(html).fadeIn(1000);
+              });
+            }
+          });
         });
       });
     </script>

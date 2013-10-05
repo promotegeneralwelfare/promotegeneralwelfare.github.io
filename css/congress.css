@@ -5,13 +5,25 @@ body {
   color: #333333;
   font-family: 'Bitter', Georgia, Times, "Times New Roman", serif;
   font-size: 16px;
-  margin: 0 auto;
-  padding: 20px 0 0;
+  margin: 0;
+  padding: 0;
 }
 a:link { color: #006699; }
 p {
-  font-weight: normal;
+  line-height: 1.6;
   margin: 0 0 5px;
+}
+.small {
+  font-size: 14px;
+  font-style: italic;
+}
+blockquote {
+  border-bottom: 1px solid #dddddd;
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  padding-bottom: 20px;
 }
 h1,
 h2,
@@ -22,24 +34,11 @@ h6 {
   font-family: 'Bitter', Georgia, Times, "Times New Roman", serif;
   font-weight: normal;
 }
-h2 { margin-left: 20px; }
+h1 { font-size: 32px; }
+h2 { font-size: 24px; }
 h3 {
   font-size: 18px;
-  margin: 0 0 5px;
-}
-
-/*
-clearfix
-*/
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-.clearfix:after {
-  clear: both;
+  font-weight: bold;
 }
 
 /* img */
@@ -48,14 +47,42 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
-label { margin-bottom: 5px; }
+
+.w {
+  padding: 50px;
+}
+
+.header {
+  background-color: #333333;
+  color: #ffffff;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 30%;
+}
+.header h1 {
+  background-color: #fd4239;
+  border-radius: 2px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 32px;
+  padding: 3px 8px;
+}
+form {
+  margin-top: 60px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
 input[type="text"] {
   border: 1px solid #dddddd;
   border-radius: 2px;
   font-family: 'Bitter', Georgia, Times, "Times New Roman", serif;
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 16px;
   padding: 5px;
+  width: 200px;
 }
 .btn {
   background-color: #fd4239;
@@ -63,113 +90,57 @@ input[type="text"] {
   border-radius: 2px;
   color: #ffffff;
   font-family: 'Bitter', Georgia, Times, "Times New Roman", serif;
-  font-size: 24px;
-  margin: 10px 0;
-  padding: 10px;
-}
-.btn-secondary {
-  background-color: #cccccc;
-  color: #333333;
   font-size: 16px;
+  margin: 15px 0 0;
   padding: 5px;
 }
-p.small {
-  font-size: 14px;
-  font-style: italic;
+.footnote {
+  bottom: 20px;
+  color: #999999;
+  position: absolute;
 }
 
-.header {
-  border-bottom: 1px solid #dddddd;
-  padding: 40px;
-  text-align: center;
+#legislators {
+  margin-left: 30%;
+  max-width: 50%;
 }
 
-.header form {
-  font-size: 24px;
-  margin-top: 60px;
-}
-.header h1 {
-  background-color: #fd4239;
-  border-radius: 2px;
-  color: #ffffff;
-  font-size: 100px;
-  margin: 10px 0 20px;
-  padding: 20px 40px;
-}
-.header .vote h2 { margin-top: 25px; }
-.header h2 {
-  font-size: 36px;
-  font-weight: normal;
-  margin: 20px 0;
-}
-.header h2 u {
-  color: #000000;
-  font-weight: bold;
-}
-
-#state, #legislators { display: none; }
 .state {
-  border-bottom: 1px solid #dddddd;
-  padding: 20px;
 }
-.state:nth-child(even) { background-color: #eeeeee; }
+.state h2 { margin: 20px 0 10px; }
 .person {
   background-color: #ffffff;
+  border-radius: 2px;
   -webkit-box-shadow: 0 0 2px 0 rgba(50, 50, 50, 0.2);
   -moz-box-shadow:    0 0 2px 0 rgba(50, 50, 50, 0.2);
   box-shadow:         0 0 2px 0 rgba(50, 50, 50, 0.2);
   float: left;
-  margin: 2%;
-  min-height: 420px;
-  padding: 20px 0 0;
+  margin-bottom: 10px;
   position: relative;
-  text-align: center;
-  width: 29%;
+  width: 480px;
 }
-
-@media (max-width: 999px) {
-  .vote  h1{
-    font-size: 32px;
-  }
-  .header h2 {
-    font-size: 32px;
-    font-weight: normal;
-    margin: 0 0 20px;
-  }
-  .person {
-    width: 46%;
-  }
+.w-person { padding: 10px; }
+.person h3 {
+  font-weight: normal;
+  margin: 0 0 10px;
 }
-@media (max-width: 649px) {
-  form, input[type="text"], .btn { font-size: 18px; }
-  .header h2 {
-    font-size: 18px;
-    font-weight: normal;
-    margin: 0 0 20px;
-  }
-  .person {
-    float: none;
-    margin-bottom: 20px;
-    width: 96%;
-  }
+.person img { 
+  border-radius: 2px;
+  width: 25%;
 }
-
-@media (max-width: 400px) {
-  body { padding: 10px; }
-  input[type="text"] { width: 200px; }
+.person .info {
+  float: right;
+  margin-left: 2%;
+  width: 73%;
 }
-
-.person img { margin-bottom: 10px; }
-.contact-info { text-align: center; }
 .contact-info ul {
-  margin: 0 auto 10px;
-  max-width: 200px;
+  margin: 0 0 10px;
   padding: 0;
 }
 .contact-info li {
-  list-style: none;
   float: left;
-  width: 33%;
+  list-style: none;
+  margin-right: 20px;
 }
 .contact-info li a {
   font-size: 24px;
@@ -182,13 +153,7 @@ p.small {
   color: #00ACEE;
 }
 .term-end {
-  background-color: #fd4239;
-  bottom: 0;
-  color: #ffffff;
   margin: 20px 0 0;
-  padding: 10px 0;
-  position: absolute;
-  width: 100%;
 }
 
 .footer {
@@ -204,10 +169,12 @@ typeahead
   background-color: #fff;
   border: 1px solid #ddd;
   text-align: left;
+  width: 210px;
 }
 .tt-suggestion {
   border-bottom: 1px solid #ddd;
-  padding: 5px;
+  color: #333333;
+  padding: 10px;
 }
 .tt-suggestion p {
   margin: 0;
@@ -221,3 +188,92 @@ typeahead
   padding-right: 20px;
 }
 .fb-like { margin-right: 10px; }
+
+/*
+clearfix
+*/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* minor breakpoints */
+@media (max-width: 1405px) {
+  .header h1 { font-size: 28px; }
+}
+@media (max-width: 1250px) {
+  .header h1 { font-size: 24px; }
+}
+@media (max-width: 1155px) {
+  .header h1 { font-size: 18px; }
+}
+@media (max-width: 450px) {
+  blockquote { font-size: 18px; }
+}
+
+/* major breakpoints */
+@media (max-width: 1090px) {
+  .header {
+    background-color: #333333;
+    color: #ffffff;
+    height: auto;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+  form { margin-top: 20px; }
+  .footnote {
+    margin-top: 20px;
+    position: static;
+  }
+  .social {
+    float: none;
+    padding-right: 0;
+  }
+  #legislators {
+    margin-left: 0;
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 800px) {
+  .w { padding: 20px; }
+  #legislators { max-width: 100% }
+}
+
+@media (max-width: 540px) {
+  .person {
+    float: none;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+  .person .info {
+    float: none;
+    margin-left: 0;
+    width: 100%;
+  }
+  .person img { 
+    border-radius: 2px;
+    margin-bottom: 5px;
+    width: 50%;
+  }
+  .contact-info ul {
+    margin: 0 auto;
+    width: 200px;
+  }
+  .contact-info li {
+    float: left;
+    list-style: none;
+    margin: 0 2%;
+    width: 29%;
+  }
+}
